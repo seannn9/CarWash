@@ -29,7 +29,7 @@ public class Main {
 			if (ans == 'y') {
 				continue;
 			} else if (ans == 'n'){
-				break;
+				run = false;
 			}
 		}
 		
