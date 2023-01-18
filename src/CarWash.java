@@ -12,14 +12,18 @@ public class CarWash {
 	
 	public double getPrice() {
 		if (type == 1) {
-			if (level == 1) {
-				price = 250;
-			} else if (level == 2) {
-				price = 500;
-			} else {
-				price = 750;
+			switch(level) {
+				case 1:
+					price = 250;
+					break;
+				case 2:
+					price = 500;
+					break;
+				case 3:
+					price = 750;
+					break;
 			}
-		}
+		} 
 		else if (type == 2) {
 			if (level == 1) {
 				price = 500;
@@ -40,5 +44,4 @@ public class CarWash {
 		}
 		return car;
 	}
-	
 }

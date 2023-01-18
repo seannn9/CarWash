@@ -27,6 +27,7 @@ public class Main {
 			System.out.print("Do you want to use the car wash again? y/n: ");
 			char ans = in.next().toLowerCase().charAt(0);
 			if (ans == 'y') {
+				System.out.println();
 				continue;
 			} else if (ans == 'n'){
 				run = false;
