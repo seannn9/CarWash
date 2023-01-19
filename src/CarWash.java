@@ -21,7 +21,7 @@ public class CarWash {
 
 	public double getChange(double pay) {
 		change = pay-price;
-		return change;
+		return (double)change;
 	}
 	
 	public String getType() {
