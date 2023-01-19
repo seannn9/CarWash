@@ -10,11 +10,14 @@ public class Main {
 		do {
 			System.out.println("\tWelcome to our Car Wash!");
 			
+			// call getInput and pass prompt to get input on type and level
 			type = getInput("What type of Car do you have?\n1 - Sedan\n2 - SUV\n3 - Van\nyour car: ");
+			System.out.println();
 			level = getInput("What level of cleaning do you want for your vehicle?\n1 - Basic Wash : (Exterior only)"
 			+ "\n2 - Intermediate Wash : (Exterior + Vaccuming Interior)\n3 - Full-service Wash : (Exterior + Full Interior)\nlevel: ");
 
-			CarWash car = new CarWash(type, level); // created a new CarWash object
+			// Created a CarWash object that takes the type and level argument
+			CarWash car = new CarWash(type, level);
 
 			System.out.println("\nProceeding to payment...");
 			System.out.println("The price is: " + car.getPrice());
@@ -31,10 +34,11 @@ public class Main {
 				}
 			} while (pay < car.getPrice());
 			
-			car.getChange(pay);
-			car.getType();
-			car.getLevel();
-			car.printReceipt(pay);
+			// call required methods from CarWash class
+			car.getChange(pay); 
+			car.getType(); 
+			car.getLevel(); 
+			car.printReceipt(pay); 
 
 			System.out.print("\nDo you want to use the car wash again? y/n: ");
 			ans = in.next().toLowerCase().charAt(0);
@@ -42,23 +46,23 @@ public class Main {
 				System.out.println();
 				continue;
 			} else if (ans == 'n'){
-				System.out.println("Thank you for trusting our car wash. Please come again!");
+				System.out.println("\nThank you for trusting our car wash. Please come again!\n");
 				break;
 			}
 		} while (ans == 'y');
 		in.close();
 	}
 
-	// method for getting input for level and type
+	// method for getting input for level and type that takes in the prompt as a parameter
 	public static int getInput(String prompt) {
 		int num = 0;
-		boolean valid = false;
-		while (!valid) {
+		boolean valid = false; 
+		while (!valid) { // while True, keep looping
 			System.out.print(prompt);
 			try {
 				num = in.nextInt();
-				if (num >= 1 && num <= 3) {
-					valid = true;
+				if (num >= 1 && num <= 3) { // only accept between 1 and 3
+					valid = true; // set valid as true resulting in !true which is false and exit the loop
 				} else {
 					System.out.println("Ivalid Input, please enter a number between 1-3");
 				}
