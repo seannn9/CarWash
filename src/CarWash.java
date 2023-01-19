@@ -7,7 +7,7 @@ public class CarWash {
 	// constructor that takes in the type and level of the car as parameter and makes it available for the class
 	CarWash(int type, int level) {
 		this.type = type;
-		this.level = level;
+		this.level = level;	
 	}
 	
 	// method for getting the price from the list (depending on type and level) and returning it
@@ -55,10 +55,10 @@ public class CarWash {
 	public void printReceipt(double pay) {
 		System.out.println();
 		System.out.println("\tReceipt:");
-		System.out.println("Type of Car: " + car);
-		System.out.println("Level of Cleaning: " + lvl);
+		System.out.println("Type of Car: " + getType());
+		System.out.println("Level of Cleaning: " + getLevel());
 		System.out.println("Price: " + price);
 		System.out.println("Payment amount: " + pay);
-		System.out.println("Change: " + change);
+		System.out.println("Change: " + getChange(pay));
 	}
 }

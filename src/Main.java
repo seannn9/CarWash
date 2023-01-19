@@ -25,10 +25,7 @@ public class Main {
 			// call processPayment to accept payment from user
 			pay = processPayment(car.getPrice());
 			
-			// call required methods from CarWash class
-			car.getChange(pay); 
-			car.getType(); 
-			car.getLevel(); 
+			// prints the receipts
 			car.printReceipt(pay); 
 
 			// call tryAgain method to ask if the user wants to go again or not and assing it to the run variable in the while loop
