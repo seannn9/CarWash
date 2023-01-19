@@ -21,7 +21,7 @@ public class CarWash {
 		return price;
 	}
 
-	// method for calulating change and returning it
+	// method for calculating change and returning it
 	public double getChange(double pay) {
 		change = pay-price;
 		return (double)change;

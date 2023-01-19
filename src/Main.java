@@ -7,17 +7,15 @@ public class Main {
 		int type, level;
 		double pay = 0.0;
 		boolean run = true;	
-		String typePrompt = "What type of Car do you have?\n1 - Sedan\n2 - SUV\n3 - Van\nyour car: ";
-		String lvlPrompt = "What level of cleaning do you want for your vehicle?\n1 - Basic Wash : (Exterior only)"
-			+ "\n2 - Intermediate Wash : (Exterior + Vaccuming Interior)\n3 - Full-service Wash : (Exterior + Full Interior)\nlevel: ";
 
 		while (run) {
 			System.out.println("\tWelcome to our Car Wash!");
 
 			// call getInput and pass prompt to get input on type and level
-			type = getInput(typePrompt);
+			type = getInput("What type of Car do you have?\n1 - Sedan\n2 - SUV\n3 - Van\nyour car: ");
 			System.out.println();
-			level = getInput(lvlPrompt);
+			level = getInput("What level of cleaning do you want for your vehicle?\n1 - Basic Wash : (Exterior only)"
+			+ "\n2 - Intermediate Wash : (Exterior + Vacuuming Interior)\n3 - Full-service Wash : (Exterior + Full Interior)\nlevel: ");
 
 			// Created a CarWash object that takes the type and level argument
 			CarWash car = new CarWash(type, level);
@@ -28,7 +26,7 @@ public class Main {
 			// prints the receipts
 			car.printReceipt(pay); 
 
-			// call tryAgain method to ask if the user wants to go again or not and assing it to the run variable in the while loop
+			// call tryAgain method to ask if the user wants to go again or not and assign it to the run variable in the while loop
 			run = tryAgain();
 		}
 		in.close();
