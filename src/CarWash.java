@@ -1,4 +1,3 @@
-
 public class CarWash {
 	private double price, change;
 	private int type, level;

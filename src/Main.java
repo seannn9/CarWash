@@ -9,7 +9,7 @@ public class Main {
 		boolean run = true;	
 
 		while (run) {
-			System.out.println("\tWelcome to our Car Wash!");
+			System.out.println("\tWelcome to our Wash n' Roll!");
 
 			// call getInput and pass prompt to get input on type and level
 			type = getInput("What type of Car do you have?\n1 - Sedan\n2 - SUV\n3 - Van\nyour car: ");
@@ -71,8 +71,8 @@ public class Main {
 				}
 			} while (pay < price);
 		return pay;
-	}
-
+	} 
+ 
 	// method for getting decision from user if they want to go again
 	public static boolean tryAgain() {
 		String ans;
@@ -87,7 +87,7 @@ public class Main {
 				run = false;
 				tryAgain = true;
 			} else if (ans.equals("n")){
-				System.out.println("\nThank you for trusting our car wash. Please come again!\n");
+				System.out.println("\nThank you for trusting Wash n' Roll. Please come again!\n");
 				run = false;
 				tryAgain = false;
 			} else {
